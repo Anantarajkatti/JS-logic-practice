@@ -98,18 +98,43 @@
 // 12 98 1 2 3 5 8 9 11
 
 
-let array1=[98,12]
-let array2=[1,2,3,8,5,9]
-let array3=[11]
-const xy=(x,y)=>x-y
-array1.sort(xy)
-array2.sort(xy)
-array3.sort(xy)
+// let array1=[98,12]
+// let array2=[1,2,3,8,5,9]
+// let array3=[11]
+// const xy=(x,y)=>x-y
+// array1.sort(xy)
+// array2.sort(xy)
+// array3.sort(xy)
 
-array1.push(...array2)
-array1.push(...array3)
+// array1.push(...array2)
+// array1.push(...array3)
 
-console.log(...array1)
+// console.log(...array1)
+
+// given index array elements sorted in ascending order
+
+// Sample Input :
+// 5
+// 3 9 1 44 6
+// Sample Output :
+// 1 9 3 44 6
+
+const array=[3,9,1,44,6]
+let temp=0
+for(let i=0;i<array.length;i=i+2)
+{
+   if(i>array.length)
+      break
+   console.log(i)
+   if(array[i]>array[i+2]){
+      console.log("greater")
+    temp=array[i]
+    array[i]=array[i+2]
+    array[i+2]=temp
+   }
+} 
+
+console.log(array)
 
 
 
