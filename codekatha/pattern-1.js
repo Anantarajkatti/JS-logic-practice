@@ -97,5 +97,6 @@ function invertedPyramid(number)
     }
     
 }
-
+ 
 invertedPyramid(5)
+
