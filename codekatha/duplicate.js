@@ -51,3 +51,34 @@ for(let i=0;i<checkArray.length;i++)
 }
 console.log(newArray)
 
+//Sample Input :
+// 3 3
+// 87 21 34
+// 89 32 78
+// 12 23 45
+// Sample Output :
+// 12 21 23
+// 32 34 45
+// 78 87 89
+
+let n=3
+let m=3
+
+const matrix=[[87,21, 34],[89, 32 ,78],[12, 23, 45]]
+const newMatrix=matrix.flat().sort((x,y)=>x-y)
+console.log(newMatrix)
+
+
+
+for(let i=0;i<n;i++)
+{
+     for(let j=0;j<matrix[i].length;j++)
+     {
+
+      matrix[i][j]=newMatrix.shift()
+     }
+}
+console.log(matrix)
+
+
+
