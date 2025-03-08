@@ -159,8 +159,9 @@ for(let i=0;i<array.length;i++)
    let flag=false
    for(let j=i;j<i+n;j++)
    {
-      
-      console.log("j=",j)
+       if(j!== array.length)
+        {
+         console.log("j=",j)
       console.log("array[j]",array[j])
       if(array[j]=== 0)
       {
@@ -168,6 +169,7 @@ for(let i=0;i<array.length;i++)
          flag=true
          newArray.push(j+1)
       }
+        }
    }
    if(flag===false)
    {
