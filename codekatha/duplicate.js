@@ -119,22 +119,67 @@
 // Sample Output :
 // 1 9 3 44 6
 
-const array=[3,9,1,44,6]
-let temp=0
-for(let i=0;i<array.length;i=i+2)
-{
-   if(i>array.length)
-      break
-   console.log(i)
-   if(array[i]>array[i+2]){
-      console.log("greater")
-    temp=array[i]
-    array[i]=array[i+2]
-    array[i+2]=temp
-   }
-} 
+// const array=[3,9,1,44,6]
+// let temp=0
+// for(let i=0;i<array.length;i=i+2)
+// {
+//    if(i>array.length)
+//       break
+//    console.log(i)
+//    if(array[i]>array[i+2]){
+//       console.log("greater")
+//     temp=array[i]
+//     array[i]=array[i+2]
+//     array[i+2]=temp
+//    }
+// } 
 
-console.log(array)
+// console.log(array)
+
+//Input Description:
+// You are given two numbers ‘n’ and ‘w’ n representing size of array and ‘w’ size of window
+
+// Output Description:
+// Print the index of first 0(1 basedindexing),if there is no index with 0 print -1
+
+// Sample Input :
+// 7 2
+// 1 0 6 7 4 0 9
+// Sample Output :
+// 2 2 -1 -1 6 6
+
+const array=[1,0,6,7,4,0,9]
+const newArray=[]
+let m=7
+let n=2
+
+for(let i=0;i<array.length;i++)
+{
+   console.log("i -- ",i)
+   let flag=false
+   for(let j=i;j<i+n;j++)
+   {
+      
+      console.log("j=",j)
+      console.log("array[j]",array[j])
+      if(array[j]=== 0)
+      {
+         console.log("pushed",j+1)
+         flag=true
+         newArray.push(j+1)
+      }
+   }
+   if(flag===false)
+   {
+      newArray.push(-1)
+      console.log("pushed -1")
+   }
+   console.log("-----------------------------")
+}
+
+console.log(newArray)
+
+
 
 
 
